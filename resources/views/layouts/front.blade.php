@@ -174,7 +174,7 @@
                                         <span class="total-items">0</span>
                                     </a>
                                 </div>
-                                <x-cart-menu />
+                                {{-- <x-cart-menu /> --}}
                             </div>
                         </div>
                     </div>
