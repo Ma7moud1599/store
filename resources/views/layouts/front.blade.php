@@ -52,12 +52,18 @@
                                         <form action="{{ route('currency.store') }}" method="post">
                                             @csrf
                                             <select name="currency_code" onchange="this.form.submit()">
-                                                <option value="USD" @selected('USD' == session('currency_code'))>$ USD</option>
-                                                <option value="EUR" @selected('EUR' == session('currency_code'))>€ EURO</option>
-                                                <option value="ILS" @selected('ILS' == session('currency_code'))>$ ILS</option>
-                                                <option value="JOD" @selected('JOD' == session('currency_code'))>₹ JOD</option>
-                                                <option value="SAR" @selected('SAR' == session('currency_code'))>¥ SAR</option>
-                                                <option value="QAR" @selected('QAR' == session('currency_code'))>৳ QAR</option>
+                                                <option value="USD" @selected('USD'==session('currency_code'))>$ USD
+                                                </option>
+                                                <option value="EUR" @selected('EUR'==session('currency_code'))>€ EURO
+                                                </option>
+                                                <option value="ILS" @selected('ILS'==session('currency_code'))>$ ILS
+                                                </option>
+                                                <option value="JOD" @selected('JOD'==session('currency_code'))>₹ JOD
+                                                </option>
+                                                <option value="SAR" @selected('SAR'==session('currency_code'))>¥ SAR
+                                                </option>
+                                                <option value="QAR" @selected('QAR'==session('currency_code'))>৳ QAR
+                                                </option>
                                             </select>
                                         </form>
                                     </div>
@@ -66,8 +72,11 @@
                                     <div class="select-position">
                                         <form action="{{ URL::current() }}" method="get">
                                             <select name="locale" onchange="this.form.submit()">
-                                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                                    <option value="{{ $localeCode }}" @selected($localeCode == App::currentLocale())>{{ $properties['native'] }}</option>
+                                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode =>
+                                                $properties)
+                                                <option value="{{ $localeCode }}"
+                                                    @selected($localeCode==App::currentLocale())>{{
+                                                    $properties['native'] }}</option>
                                                 @endforeach
                                             </select>
                                         </form>
@@ -94,7 +103,9 @@
                             </div>
                             <ul class="user-login">
                                 <li>
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout').submit()">Sign Out</a>
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout').submit()">Sign
+                                        Out</a>
                                 </li>
                                 <form action="{{ route('logout') }}" id="logout" method="post" style="display:none">
                                     @csrf
@@ -174,7 +185,7 @@
                                         <span class="total-items">0</span>
                                     </a>
                                 </div>
-                                {{-- <x-cart-menu /> --}}
+                                <x-cart-menu />
                             </div>
                         </div>
                     </div>
@@ -470,9 +481,9 @@
     <script src="{{ asset('assets/js/tiny-slider.js') }}"></script>
     <script src="{{ asset('assets/js/glightbox.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
-    
+
     @stack('scripts')
-    
+
 </body>
 
 </html>

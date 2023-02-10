@@ -3,8 +3,8 @@
 @section('title', 'Admins')
 
 @section('breadcrumb')
-    @parent
-    <li class="breadcrumb-item active">Admins</li>
+@parent
+<li class="breadcrumb-item active">Admins</li>
 @endsection
 
 @section('content')
@@ -37,7 +37,8 @@
             <td>{{ $admin->created_at }}</td>
             <td>
                 @can('admins.update')
-                <a href="{{ route('dashboard.admins.edit', $admin->id) }}" class="btn btn-sm btn-outline-success">Edit</a>
+                <a href="{{ route('dashboard.admins.edit', $admin->id) }}"
+                    class="btn btn-sm btn-outline-success">Edit</a>
                 @endcan
             </td>
             <td>

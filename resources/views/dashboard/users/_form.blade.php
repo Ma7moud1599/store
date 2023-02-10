@@ -1,4 +1,3 @@
-
 <div class="form-group">
     <x-form.input label="Name" class="form-control-lg" name="name" :value="$user->name" />
 </div>
@@ -12,7 +11,8 @@
 
     @foreach ($roles as $role)
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="roles[]" value="{{ $role->id }}" @checked(in_array($role->id, old('roles', $user_roles)))>
+        <input class="form-check-input" type="checkbox" name="roles[]" value="{{ $role->id }}"
+            @checked(in_array($role->id, old('roles', $user_roles)))>
         <label class="form-check-label">
             {{ $role->name }}
         </label>

@@ -3,8 +3,8 @@
 @section('title', 'Roles')
 
 @section('breadcrumb')
-    @parent
-    <li class="breadcrumb-item active">Roles</li>
+@parent
+<li class="breadcrumb-item active">Roles</li>
 @endsection
 
 @section('content')

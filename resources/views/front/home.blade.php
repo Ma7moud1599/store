@@ -3,7 +3,7 @@
     <section class="hero-area">
         <div class="container">
             <x-alert type="info" />
-            
+
             <div class="row">
                 <div class="col-lg-8 col-12 custom-padding-right">
                     <div class="slider-head">
@@ -740,7 +740,7 @@
     </section>
     <!-- End Shipping Info -->
 
-@push('scripts')
+    @push('scripts')
     <script type="text/javascript">
         //========= Hero Slider 
         tns({
@@ -813,6 +813,6 @@
         timer();
         setInterval(timer, 1000);
     </script>
-@endpush
+    @endpush
 
 </x-front-layout>

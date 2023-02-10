@@ -11,7 +11,7 @@
 
 <form action="{{ route('dashboard.admins.store') }}" method="post" enctype="multipart/form-data">
     @csrf
-    
+
     @include('dashboard.admins._form')
 </form>
 

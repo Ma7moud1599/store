@@ -13,9 +13,9 @@
 <form action="{{ route('dashboard.roles.update', $role->id) }}" method="post" enctype="multipart/form-data">
     @csrf
     @method('put')
-    
+
     @include('dashboard.roles._form', [
-        'button_label' => 'Update'    
+    'button_label' => 'Update'
     ])
 </form>
 

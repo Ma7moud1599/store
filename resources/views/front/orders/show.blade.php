@@ -73,5 +73,7 @@
 
         window.initMap = initMap;
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google.api_key') }}&callback=initMap&v=weekly" defer></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google.api_key') }}&callback=initMap&v=weekly"
+        defer></script>
 </x-front-layout>

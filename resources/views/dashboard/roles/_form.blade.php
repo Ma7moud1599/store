@@ -1,4 +1,3 @@
-
 <div class="form-group">
     <x-form.input label="Role Name" class="form-control-lg" role="input" name="name" :value="$role->name" />
 </div>
@@ -12,15 +11,18 @@
             {{ is_callable($ability_name)? $ability_name() : $ability_name }}
         </div>
         <div class="col-md-2">
-            <input type="radio" name="abilities[{{ $ability_code }}]" value="allow" @checked(($role_abilities[$ability_code] ?? '') == 'allow')>
+            <input type="radio" name="abilities[{{ $ability_code }}]" value="allow"
+                @checked(($role_abilities[$ability_code] ?? '' )=='allow' )>
             Allow
         </div>
         <div class="col-md-2">
-            <input type="radio" name="abilities[{{ $ability_code }}]" value="deny" @checked(($role_abilities[$ability_code] ?? '') == 'deny')>
+            <input type="radio" name="abilities[{{ $ability_code }}]" value="deny"
+                @checked(($role_abilities[$ability_code] ?? '' )=='deny' )>
             Deny
         </div>
         <div class="col-md-2">
-            <input type="radio" name="abilities[{{ $ability_code }}]" value="inherit" @checked(($role_abilities[$ability_code] ?? '') == 'inherit')>
+            <input type="radio" name="abilities[{{ $ability_code }}]" value="inherit"
+                @checked(($role_abilities[$ability_code] ?? '' )=='inherit' )>
             Inherit
         </div>
     </div>

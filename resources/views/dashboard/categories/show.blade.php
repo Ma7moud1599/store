@@ -22,7 +22,7 @@
     </thead>
     <tbody>
         @php
-            $products = $category->products()->with('store')->latest()->paginate(5);
+        $products = $category->products()->with('store')->latest()->paginate(5);
         @endphp
         @forelse($products as $product)
         <tr>

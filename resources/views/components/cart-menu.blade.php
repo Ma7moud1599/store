@@ -19,7 +19,8 @@
                 </div>
                 <div class="content">
                     <h4><a href="product-details.html">{{ $item->product->name }}</a></h4>
-                    <p class="quantity">{{ $item->quantity }}x - <span class="amount">{{ Currency::format($item->product->price) }}</span></p>
+                    <p class="quantity">{{ $item->quantity }}x - <span class="amount">{{
+                            Currency::format($item->product->price) }}</span></p>
                 </div>
             </li>
             @endforeach

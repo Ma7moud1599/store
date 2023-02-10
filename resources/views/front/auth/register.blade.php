@@ -66,7 +66,8 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="reg-pass-confirm">Confirm Password</label>
-                                    <x-form.input type="password" id="reg-pass-confirm" name="password_confirmation" required />
+                                    <x-form.input type="password" id="reg-pass-confirm" name="password_confirmation"
+                                        required />
                                 </div>
                             </div>
                             <div class="button">

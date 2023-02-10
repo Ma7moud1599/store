@@ -9,7 +9,8 @@
         <span class="new-tag">New</span>
         @endif
         <div class="button">
-            <a href="{{ route('products.show', $product->id) }}" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+            <a href="{{ route('products.show', $product->id) }}" class="btn"><i class="lni lni-cart"></i> Add to
+                Cart</a>
         </div>
     </div>
     <div class="product-info">
@@ -18,10 +19,10 @@
             <a href="{{ route('products.show', $product->slug) }}">{{ $product->name }}</a>
         </h4>
         <ul class="review">
-            @for ($i = 1; $i <= 5; $i++)
-            <li><i class="lni lni-star{{ ($i <= $product->rating)? '-filled' : '' }}"></i></li>
-            @endfor
-            <li><span>{{ $product->rating }} Review(s)</span></li>
+            @for ($i = 1; $i <= 5; $i++) <li><i class="lni lni-star{{ ($i <= $product->rating)? '-filled' : '' }}"></i>
+                </li>
+                @endfor
+                <li><span>{{ $product->rating }} Review(s)</span></li>
         </ul>
         <div class="price">
             <span>{{ Currency::format($product->price) }}</span>

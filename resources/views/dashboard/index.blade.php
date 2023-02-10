@@ -3,8 +3,8 @@
 @section('title', 'Starter Page')
 
 @section('breadcrumb')
-    @parent
-    <li class="breadcrumb-item active">Starter Page</li>
+@parent
+<li class="breadcrumb-item active">Starter Page</li>
 @endsection
 
 @section('content')
@@ -68,5 +68,3 @@
 </div>
 
 @endsection
-
-
